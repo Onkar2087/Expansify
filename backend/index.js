@@ -16,7 +16,9 @@ let app = express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin: ["http://localhost:5173", "expansify-frontend.vercel.app", "expansify-onkar-dhingra.vercel.app"],
+    origin: ["http://localhost:5173", 
+        "https://expansify-frontend.vercel.app", 
+        "https://expansify-onkar-dhingra.vercel.app"],
     credentials: true
 }))
 app.use("/api/auth", authRouter)
@@ -35,5 +37,6 @@ app.listen(port, '0.0.0.0', () => {
     console.log("Server Started")
     connectDb()
 })
+
 
 
