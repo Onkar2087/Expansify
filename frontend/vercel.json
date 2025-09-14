@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "name": "expanify-frontend",
   "builds": [
     {
       "src": "package.json",
@@ -14,5 +15,9 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-]
+  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "rootDirectory": "frontend"
 }
