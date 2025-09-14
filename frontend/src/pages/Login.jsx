@@ -60,7 +60,7 @@ function logIn() {
       <form
         action=""
         onSubmit={(e)=>e.preventDefault()}
-        className="w-[90%] md:w-200 h-165 md:h-160  bg-[white] shadow-xl rounded-2xl flex"
+        className="w-[90%] md:w-200 h-150   bg-[white] shadow-xl rounded-2xl flex"
       >
         <div className="md:w-[50%] w-[100%] h-[100%] flex flex-col items-center justify-center gap-6">
             <img src={logo} className="w-[70px] md:hidden" alt="" />
@@ -145,3 +145,4 @@ function logIn() {
 }
 
 export default logIn;
+
