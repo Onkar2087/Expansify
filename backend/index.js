@@ -11,7 +11,7 @@ import aiRouter from "./routes/aiRoute.js"
 import reviewRouter from "./routes/reviewRoute.js"
 dotenv.config()
 
-let port = process.env.PORT
+let port = process.env.PORT || 8000
 let app = express()
 app.use(express.json())
 app.use(cookieParser())
@@ -37,6 +37,7 @@ app.listen(port, '0.0.0.0', () => {
     console.log("Server Started")
     connectDb()
 })
+
 
 
 
