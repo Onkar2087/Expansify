@@ -18,9 +18,13 @@ app.use(cookieParser())
 app.use(cors({
     origin: ["http://localhost:5173", 
         "https://expansify-frontend.vercel.app", 
-        "https://expansify-onkar-dhingra.vercel.app"],
+        "https://expansify-onkar-dhingra.vercel.app",
+        "https://expanify-frontend.vercel.app"],
     credentials: true
 }))
+// Handle preflight requests
+app.options('*', cors())
+
 app.use("/api/auth", authRouter)
 app.use("/api/user", userRouter)
 app.use("/api/course", courseRouter)
@@ -37,7 +41,4 @@ app.listen(port, '0.0.0.0', () => {
     console.log("Server Started")
     connectDb()
 })
-
-
-
 
